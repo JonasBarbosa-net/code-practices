@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList JS</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .box {
+            border-radius: 20px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.288);
+            height: 200px;
+            width: 200px;
+        }
+
+        .boxCor1 {
+            background-color: rgb(60, 60, 212);
+            border-radius: 20px;
+            transition: 1s;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.288);
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+        <button class="botao" onclick="mudarClass()">mudar cor</button>
+    </div>
+
+
+    <!--JavaScript-->
+    <script>
+        var caixa = document.querySelector('.box')
+        var btn = document.querySelector('.botao')
+
+        function mudarClass() {
+            if (btn) {
+                // troca a .class do elemento "div.box" para "boxCor1"
+                caixa.classList.toggle('boxCor1')
+            }
+        }
+    </script>
+</body>
+</html>

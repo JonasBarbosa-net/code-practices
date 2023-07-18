@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <title>MediaQueries em css</title>
+    <link rel="stylesheet" href="paraTelas.css" media="screen"> <!--define um documento css para estilização no layout de tela-->
+    <link rel="stylesheet" href="paraImpressao.css" media="print"> <!--define um documento css para estilização no layout de impressão-->
+    <style>
+        body {
+            background-color: blueviolet;
+            transition: 1s;
+        }
+
+        /*Por padrão esta página possui a cor violeta, porém esse valor é mudado 
+        quando o tamanho da tela é diferente do especificado no parâmetro*/
+        
+        @media (min-width: 600px) {
+            body {
+                background-color: blue;
+                transition: 1s;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

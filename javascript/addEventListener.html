@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+    <style>
+        /*Configuração necessária para podermos vizualizar a caixa na tela*/
+        .box {
+            background-color: rgb(56, 56, 202);
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Essa funcionará como uma caixa quadrada-->
+    <div class="box">
+        <button class="botao">mudar cor</button>
+    </div>
+    
+
+
+    <!--Área do Javascript-->
+    <script>
+        // seleciona a class .botao
+        const botao = document.querySelector('.botao') 
+        // seleciona a class .box
+        const box = document.querySelector('.box')
+
+
+        // Adiciona o evento "onclick() na div que possui a class .botao, quando for chamado/ativado ele chama a função "transformar"
+        botao.addEventListener('click', transformar)
+        
+
+        function transformar() {
+            box.style.background = 'rgb(108, 41, 089)'
+            box.style.transition = "0.8s"
+            box.style.borderRadius = "120px"
+        }
+    </script>
+
+
+
+    <!--
+        { EXPLICAÇÃO DETALHADA }
+
+        ###### HTML ######
+        - Criamos uma "div" dentro de "body" no HTML e adicionamos uma classe chamada ".box" a ela.
+        - Dentro dessa div criamos um "button" e adicionamos uma classe chamada ".botao" a ele.
+
+        ###### JAVASCRIPT ######
+        -
+    -->
+</body>
+</html>

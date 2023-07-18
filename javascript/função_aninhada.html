@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <title>Botão de ação dupla</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: blanchedalmond;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.568);
+            text-align: center;
+            border-radius: 20px;
+            padding: 0px 20px;
+            height: 380px;
+            width: 300px;
+        }
+
+        .box p {
+            text-align: justify;
+        }
+
+        .box button {
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(235, 205, 150);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Clique em mim!</h2>
+            <p>
+                Olá, eu me chamo Jonas, atualmente estou trabalhando em pequenos mini-projetos individuais como esse simples botão, por exemplo, a cada clique que você der nele, ele irá alterar o background da página para uma nova cor (no 5º clique ele retorna para a cor inicial), tudo isso e muito mais é possível por meio da linguagem de programação <strong>Javascript</strong> que foi adicionada a página.
+            </p>
+
+            <button class="btn">clique em mim!</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let botao = document.querySelector('button.btn')
+        let titulo = document.getElementsByTagName('h2')
+        botao.addEventListener("click", clicar)
+        let estadoBotao = 0;
+
+        function clicar() {
+            estadoBotao++ // adiciona +1 ao valor atual, a cada click o valor aumenta.
+            executarCores()
+        }
+
+
+
+        function executarCores() {
+        if (estadoBotao === 1) {
+            primeira();
+        } else if (estadoBotao === 2) {
+            segunda();
+        } else if (estadoBotao === 3) {
+            terceira();
+        } else if (estadoBotao === 4) {
+            quarta()
+            estadoBotao = 0 // reinicia o contador para zero(0)
+        }
+        }
+
+        function primeira() {
+            document.body.style.background = 'blue'
+            titulo.innerText = 'jonas'
+            document.body.style.transition = '1s'
+        }
+
+        function segunda() {
+            document.body.style.background = 'orange'
+            document.body.style.transition = '1s'
+        }
+
+        function terceira() {
+            document.body.style.background = 'red'
+            document.body.style.transition = '1s'
+        }
+
+        function quarta() {
+            document.body.style.background = 'green'
+            document.body.style.transition = '1s'
+        }
+    </script>
+</body>
+</html>
