@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>LocalStorage em JS</title>
+</head>
+<body>
+    <input type="text" id="nome">
+    <input type="number" id="idade">
+    <button id="enviarNome" onclick="mostrarNome()">enviar</button>
+
+    <script>
+        function mostrarNome() {
+           var userName = document.querySelector('#nome').value
+           var userYear = document.querySelector('#idade').value
+
+           localStorage.setItem('nome', userName)
+           localStorage.setItem('idade', userYear)
+
+            var nome = localStorage.getItem('nome')
+            var idade = localStorage.getItem('idade')
+
+            confirm(`Seu nome é ${nome}, sua idade é ${idade} anos. Está correto?`)
+        }
+    </script>
+</body>
+</html>
